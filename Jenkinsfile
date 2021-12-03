@@ -30,7 +30,8 @@ pipeline {
 				}
 				stage("Integration Test"){
 					agent{
-						node { label 'worker-node'}
+						node { 
+							label 'worker-node'
 							reuseNode true
 							image 'ubuntu'
 						}
